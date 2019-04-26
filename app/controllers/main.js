@@ -32,6 +32,16 @@ $(document).ready(function(){
         // $(".modal-footer").html(footer);
         getInput("Them nguoi dung","Cap Nhat", "btnCapNhat");
     })
+    //Cap nhat 
+    $(body).delegate(".btnSua", "click", function(){
+        var taiKhoan = $(this).data('taikhoan');
+
+        $("#HoTen").val();
+        $("#MatKhau").val();
+        $("#Email").val();
+        $("#SoDienThoai").val();
+        $("#LoaiNguoiDung").val();
+    })
 
     $("body").delegate(".btnXoa", "click", function(){
         var taiKhoan = $(this).data('taiKhoan');
@@ -47,6 +57,7 @@ $(document).ready(function(){
         var nguoiDung = new NguoiDung (taiKHoan,matkhau,hoTen,email,soDT,loaiNguoiDung);
 
     })
+
     $("#txtTimKiem").keyup(function(){
         var mangTimKiem = [];
         var taiKhoan = $("txtTimKiem").val();
